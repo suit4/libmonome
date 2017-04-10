@@ -31,6 +31,12 @@ static monome_devmap_t mapping[] = {
      */
     {"a40h%*1[-_]%d", "40h",    {8, 8},   "arduinome" , QUIRK_57600_BAUD},
 
+    /* macOS Sierra fix for Chronome
+	   *
+	   * matches chr-xxx and chr_xxx
+	   */
+	  {"chr%*1[-_]%d", "40h",    {8, 8},   "chronome" , QUIRK_57600_BAUD},
+
     /* determine device dimensions in initialization */
     {"m%d",     "mext",   {0, 0},   "monome i2c", NO_QUIRKS},
 
